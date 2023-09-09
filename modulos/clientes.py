@@ -10,7 +10,7 @@ from DataBase.DbClientes import Data_Base
 
 
 class Clients(QDialog):
-    def __init__(self,*args,**argvs):
+    def __init__(self,user,autenticado,*args,**argvs):
         super(Clients, self).__init__(*args,**argvs)
         self.ui = Ui_Clientes()
         self.ui.setupUi(self)
@@ -27,11 +27,20 @@ class Clients(QDialog):
         self.ui.btn_Editar.clicked.connect(self.Edita_Clientes)
         self.ui.btn_Excluir.clicked.connect(self.Deletar_Clientes)
         self.ui.btn_Calendario.clicked.connect(self.Dia)
+        self.ui.btn_Voltar.clicked.connect(self.AbrirMenu)
         #self.ui.L_Data.setText(Data.Funcao())
-        
+
+        self.user = user
+        self.autenticado = autenticado
     
         self.ui.Tab_CadClientes.itemSelectionChanged.connect(self.PreencherCampos_Automaticamente)
 
+    def AbrirMenu(self):
+        from modulos.menu import Start
+        self.menu = Start(user=(self.user),autenticado=(self.autenticado))
+        self.menu.show()
+        self.close()
+        
  
     def PegaSelecaoDaTabela(self):  # pega id seleção da tabela
         valor = self.ui.Tab_CadClientes.item(self.PegaSelecaoDoBanco(), 0) 

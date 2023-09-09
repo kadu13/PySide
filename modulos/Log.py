@@ -25,25 +25,25 @@ class Inicio(QDialog):
 #-------------------   VERIFICA USUARIO   -------------------------------
 
     def checkLogin(self):
-        user = self.ui.L_User.text()
-        password = self.ui.L_Senha.text()
+        self.user = self.ui.L_User.text()
+        self.password = self.ui.L_Senha.text()
 
         db = Data_Base()
         db.connect()        
 
-        if user == "admin" and password == "admin":
-            #QMessageBox.information(QMessageBox(),"Seja Bem Vindo",f" Olá, {user} \n \n Login Realizado com Sucesso!")
-            autenticado = "administrador"
-            self.window = Start(user,autenticado.lower())
+        if self.user == "admin" and self.password == "admin":
+            #QMessageBox.information(QMessageBox(),"Seja Bem Vindo",f" Olá, {self.user} \n \n Login Realizado com Sucesso!")
+            self.autenticado = "administrador"
+            self.window = Start(self.user,self.autenticado.lower())
             self.window.show()
             self.hide()
 
         else:
-            autenticado =  db.check_user(user.upper(), password)
+            self.autenticado =  db.check_user(self.user.upper(), self.password)
 
-            if autenticado.lower() == "administrador" or autenticado.lower() == "user":
-                #QMessageBox.information(QMessageBox(),"Seja Bem Vindo", f" Olá, {user} \n \n Login Realizado com Sucesso!")
-                self.w = Start(user, autenticado.lower())
+            if self.autenticado.lower() == "administrador" or self.autenticado.lower() == "user":
+                #QMessageBox.information(QMessageBox(),"Seja Bem Vindo", f" Olá, {self.user} \n \n Login Realizado com Sucesso!")
+                self.w = Start(self.user, self.autenticado.lower())
                 self.w.show()
                 self.hide()
             else:

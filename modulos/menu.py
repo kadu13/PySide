@@ -22,21 +22,21 @@ class Start(QMainWindow):
         self.setWindowTitle("Mk.Cosmeticos")
         appIcon = QIcon(u"C:/Projetos de Aplicativos/Mk.Cosmeticos/imagens/MLogo.png")
         self.setWindowIcon(appIcon)
-        
+        #self.start = Start()
 #----------------------   NOME DE USUÁRIO  ----------------------------------------------
 
-        usuario = user
+        self.usuario = user
         self.ui.L_Logado.setEnabled(False)
-        self.ui.L_Logado.setText(usuario)
+        self.ui.L_Logado.setText(self.usuario)
 
 #--------------------   PERMISSAO DE ACESSO AO FORMULARIO DE USUARIOS   ------------------
 
-        permissao = autenticado
-        if permissao == "user":
+        self.permissao = autenticado
+        if self.permissao == "user":
             self.ui.Btn_Usuarios.setVisible(False)
             self.ui.actionUsuarios.setVisible(False)
 
-        elif permissao == "administrador":
+        elif self.permissao == "administrador":
             self.ui.Btn_Usuarios.setVisible(True)
             self.ui.actionUsuarios.setVisible(True)
 
@@ -84,25 +84,26 @@ class Start(QMainWindow):
 # ------------------------- METHOR ABRIR FORMULARIOS -------------------
 
     def AbrirCad(self):
-        self.Tela = Clients()
-        self.Tela.show()
+        self.hide()
+        self.Cli = Clients(user=(self.usuario),autenticado=(self.permissao))
+        self.Cli.show()
         
-
     def AbrirComp(self):
-        self.Tela = Comp()
-        self.Tela.show()
+        self.Compr = Comp()
+        self.Compr.show()
 
     def AbrirEstoque(self):
-        self.Tela = Estoq()
-        self.Tela.show()
+        self.Est = Estoq()
+        self.Est.show()
 
     def AbrirProdutos(self):
-        self.Tela = Prod()
-        self.Tela.show()
+        self.Produ = Prod()
+        self.Produ.show()
 
     def AbrirUsuarios(self):
-        self.Tela = Users()
-        self.Tela.show()    
+        self.hide()
+        self.Usu = Users()
+        self.Usu.show()    
 
     def AbrirVendas(self):
         self.Tela = Vendas()

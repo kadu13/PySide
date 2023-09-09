@@ -18,6 +18,7 @@ class Users(QDialog):
         appIcon = QIcon(u"C:/Projetos de Aplicativos/Mk.Cosmeticos/imagens/Fundo.png")
         self.setWindowIcon(appIcon)
 
+
         # self.ui.Tab_Usuarios.setColumnWidth(1, 218)
         self.Table_users()
        
@@ -27,10 +28,73 @@ class Users(QDialog):
         self.ui.btn_Excluir.clicked.connect(self.Deletar_Users)
         self.ui.btn_Limpar.clicked.connect(self.limpar)
 
+        """ quit = QWidget.actionEvent(quit, self)
+        quit.triggered.connect(self.closeEvent) """
 
-    """ def AbrirData(self):
-        self.Da = Data()
-        self.Da.show() """
+        self.ui.Tab_Usuarios.itemSelectionChanged.connect(self.PreencherCampos_Automaticamente)
+
+ 
+    def PegaSelecaoDaTabela(self):  # pega id seleção da tabela
+        valor = self.ui.Tab_Usuarios.item(self.PegaSelecaoDoBanco(), 0) 
+        return valor.text() if not valor is None else valor  #deve retornar valor str não memoria
+
+    def PegaSelecaoDoBanco(self):  # pega id seleção do banco
+        return self.ui.Tab_Usuarios.currentRow() 
+
+#--------------------------------   CARREGA CAMPOS COM DADOS DA TABELA   ----------------------------------
+
+    def PreencherCampos_Automaticamente(self):
+        IdLinhaSelecionada = self.PegaSelecaoDoBanco()
+
+        if self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 0) != None:
+            id = self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 0).text()
+            self.ui.L_Id.setText(id)
+
+        if self.ui.Tab_Usuarios.item(IdLinhaSelecionada,1) != None:
+            data = self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 1).text()
+            self.ui.L_Data.setText(data)
+
+        if self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 2) != None:
+            nome = self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 2).text()
+            self.ui.L_Nome.setText(nome)
+
+        if self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 3) != None:
+            telefone = self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 3).text()
+            self.ui.L_Telefone.setText(telefone)
+
+        if self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 4) != None:
+            endereco = self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 4).text()
+            self.ui.L_Endereco.setText(endereco)
+
+        if self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 5) != None:
+            usuario = self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 5).text()
+            self.ui.L_Usuario.setText(usuario)
+
+        if self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 6) != None:
+            senha = self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 6).text()
+            self.ui.L_Senha.setText(senha)
+
+        if self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 7) != None:
+            permicao = self.ui.Tab_Usuarios.item(IdLinhaSelecionada, 7).text()
+            self.ui.Cbb_Permicao.setCurrentText(permicao)
+        
+
+
+#                           FECHA JANELA ATUAL E REABRE A FECHADA
+    """ def CloseEvent(self,event):
+        reply=QMessageBox.question(self,'Alerta!',"Tem certeza que deseja sair ?",QMessageBox.Yes|QMessageBox.No,QMessageBox.No)
+        if reply == QMessageBox.Yes:
+            event.accept():
+            self.menu.show()  #JANELA Á SER ABERTA
+            self.clearMask()
+            self.destroy()
+        else:
+            event.ignore()
+    
+    
+    def closeEvent(self,event):
+        self.menu.exec(object) """
+
         
     def limpar(self):
 

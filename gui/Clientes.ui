@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>625</width>
-    <height>518</height>
+    <width>634</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,23 +18,86 @@
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <pointsize>30</pointsize>
-      </font>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
      </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);
+     <item>
+      <widget class="QPushButton" name="btn_Voltar">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI Black</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(0, 0, 127);
+ 	border-radius: 0px
+}
+
+QPushButton:hover{
+	background-color: rgb(0, 85, 255);
+	color:rgb(200,200,200)
+}
+
+QPushButton:pressed{
+  background-color:rgb(35,35,35);
+  color:rgb(200,200,200)
+}
+</string>
+       </property>
+       <property name="text">
+        <string>   &lt;|  Voltar  </string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>45</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
 background-color: rgb(0, 0, 127);</string>
-     </property>
-     <property name="text">
-      <string>Clientes</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
+       </property>
+       <property name="text">
+        <string>Clientes</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item row="1" column="0">
     <widget class="QFrame" name="frame">
@@ -45,55 +108,8 @@ background-color: rgb(0, 0, 127);</string>
       <enum>QFrame::Plain</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="4">
-       <widget class="QPushButton" name="btn_Calendario">
-        <property name="font">
-         <font>
-          <family>Calibri</family>
-          <pointsize>11</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="toolTip">
-         <string>Salvar</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QPushButton{
-   border-radius: 8px
-}
-
-QPushButton:hover{
-  background-color:rgb(50,50,50);
-  color:rgb(200,200,200)
-}
-
-QPushButton:pressed{
-  background-color:rgb(35,35,35);
-  color:rgb(200,200,200)
-}
-</string>
-        </property>
-        <property name="text">
-         <string>Data</string>
-        </property>
-        <property name="icon">
-         <iconset resource="icons.qrc">
-          <normaloff>:/image/imagens/calendario.png</normaloff>:/image/imagens/calendario.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>45</width>
-          <height>45</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="L_Id">
+      <item row="1" column="3">
+       <widget class="QLineEdit" name="L_Data">
         <property name="font">
          <font>
           <pointsize>14</pointsize>
@@ -101,12 +117,41 @@ QPushButton:pressed{
           <bold>true</bold>
          </font>
         </property>
+        <property name="cursor">
+         <cursorShape>ArrowCursor</cursorShape>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
         <property name="cursorPosition">
          <number>0</number>
         </property>
+        <property name="placeholderText">
+         <string>Data</string>
+        </property>
        </widget>
       </item>
-      <item row="0" column="6">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>ID</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="7">
        <widget class="QPushButton" name="btn_Excluir">
         <property name="font">
          <font>
@@ -153,30 +198,7 @@ QPushButton:pressed{
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
-       <widget class="QLineEdit" name="L_Data">
-        <property name="font">
-         <font>
-          <pointsize>14</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="cursor">
-         <cursorShape>ArrowCursor</cursorShape>
-        </property>
-        <property name="inputMask">
-         <string/>
-        </property>
-        <property name="cursorPosition">
-         <number>0</number>
-        </property>
-        <property name="placeholderText">
-         <string>Data</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="5">
+      <item row="1" column="5">
        <widget class="QPushButton" name="btn_Salvar">
         <property name="font">
          <font>
@@ -223,8 +245,55 @@ QPushButton:pressed{
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_3">
+      <item row="1" column="4">
+       <widget class="QPushButton" name="btn_Calendario">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string>Salvar</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+   border-radius: 8px
+}
+
+QPushButton:hover{
+  background-color:rgb(50,50,50);
+  color:rgb(200,200,200)
+}
+
+QPushButton:pressed{
+  background-color:rgb(35,35,35);
+  color:rgb(200,200,200)
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/image/imagens/calendario.png</normaloff>:/image/imagens/calendario.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>45</width>
+          <height>45</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="L_Id">
         <property name="font">
          <font>
           <pointsize>14</pointsize>
@@ -232,18 +301,12 @@ QPushButton:pressed{
           <bold>true</bold>
          </font>
         </property>
-        <property name="text">
-         <string>ID</string>
-        </property>
-        <property name="textFormat">
-         <enum>Qt::AutoText</enum>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
+        <property name="cursorPosition">
+         <number>0</number>
         </property>
        </widget>
       </item>
-      <item row="0" column="2">
+      <item row="1" column="2">
        <widget class="QLabel" name="label_2">
         <property name="font">
          <font>
@@ -260,6 +323,53 @@ QPushButton:pressed{
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QPushButton" name="btn_Editar">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="toolTip">
+         <string>Salvar</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+   border-radius: 8px
+}
+
+QPushButton:hover{
+  background-color:rgb(50,50,50);
+  color:rgb(200,200,200)
+}
+
+QPushButton:pressed{
+  background-color:rgb(35,35,35);
+  color:rgb(200,200,200)
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Editar</string>
+        </property>
+        <property name="icon">
+         <iconset resource="icons.qrc">
+          <normaloff>:/image/imagens/editar (1).png</normaloff>:/image/imagens/editar (1).png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>45</width>
+          <height>45</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -448,40 +558,6 @@ QPushButton:pressed{
     </widget>
    </item>
   </layout>
-  <widget class="QLabel" name="L_Logado">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>30</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>200</width>
-     <height>48</height>
-    </size>
-   </property>
-   <property name="font">
-    <font>
-     <family>Segoe UI Black</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(0, 0, 127);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
  </widget>
  <tabstops>
   <tabstop>L_Id</tabstop>
