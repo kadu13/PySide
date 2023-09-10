@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>672</width>
-    <height>566</height>
+    <width>712</width>
+    <height>507</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -20,27 +20,84 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 0, 255);</string>
+   <string notr="true">background-color: rgb(226, 226, 226);</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
+  <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <pointsize>30</pointsize>
-      </font>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="spacing">
+      <number>0</number>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(0, 0, 127);
+     <item row="0" column="0">
+      <widget class="QPushButton" name="btn_Voltar">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI Black</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(0, 0, 127);
+   border-radius: 0px
+}
+
+QPushButton:hover{
+  background-color:rgb(50,50,50);
+  color:rgb(200,200,200)
+}
+
+QPushButton:pressed{
+  background-color:rgb(35,35,35);
+  color:rgb(200,200,200)
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/image/imagens/voltar1.png</normaloff>:/image/imagens/voltar1.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>80</width>
+         <height>45</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 127);
 color: rgb(255, 255, 255);</string>
-     </property>
-     <property name="text">
-      <string>Controle de Estoque</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
+       </property>
+       <property name="text">
+        <string>Controle de Estoque</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item row="1" column="0">
     <widget class="QPushButton" name="btn_Cad_Produto">

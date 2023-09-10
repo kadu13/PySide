@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 85, 255);</string>
+   <string notr="true">background-color: rgb(226, 226, 226);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
@@ -106,7 +106,7 @@
             <x>0</x>
             <y>0</y>
             <width>188</width>
-            <height>364</height>
+            <height>371</height>
            </rect>
           </property>
           <attribute name="label">
@@ -136,6 +136,7 @@
            <property name="font">
             <font>
              <pointsize>14</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -195,6 +196,7 @@ QPushButton:pressed{
            <property name="font">
             <font>
              <pointsize>14</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -254,6 +256,7 @@ QPushButton:pressed{
            <property name="font">
             <font>
              <pointsize>14</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -313,6 +316,7 @@ QPushButton:pressed{
            <property name="font">
             <font>
              <pointsize>14</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -372,6 +376,7 @@ QPushButton:pressed{
            <property name="font">
             <font>
              <pointsize>14</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -431,6 +436,7 @@ QPushButton:pressed{
            <property name="font">
             <font>
              <pointsize>14</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -473,7 +479,7 @@ QPushButton:pressed{
             <x>0</x>
             <y>0</y>
             <width>188</width>
-            <height>364</height>
+            <height>371</height>
            </rect>
           </property>
           <attribute name="label">
@@ -503,6 +509,7 @@ QPushButton:pressed{
            <property name="font">
             <font>
              <pointsize>14</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -562,6 +569,7 @@ QPushButton:pressed{
            <property name="font">
             <font>
              <pointsize>14</pointsize>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -642,6 +650,7 @@ QPushButton:pressed{
          <property name="font">
           <font>
            <pointsize>14</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -671,6 +680,7 @@ QPushButton:pressed{
        <font>
         <family>Segoe UI Black</family>
         <pointsize>14</pointsize>
+        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -694,7 +704,7 @@ QPushButton:pressed{
      <x>0</x>
      <y>0</y>
      <width>626</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArquivos">

@@ -18,43 +18,79 @@ class Ui_Vendas(object):
     def setupUi(self, Vendas):
         if not Vendas.objectName():
             Vendas.setObjectName(u"Vendas")
-        Vendas.resize(759, 412)
-        Vendas.setStyleSheet(u"background-color: rgb(255, 85, 255);")
-        self.gridLayout_2 = QGridLayout(Vendas)
+        Vendas.resize(842, 558)
+        Vendas.setStyleSheet(u"background-color: rgb(226, 226, 226);")
+        self.gridLayout_6 = QGridLayout(Vendas)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.gridLayout_2 = QGridLayout()
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.label_2 = QLabel(Vendas)
-        self.label_2.setObjectName(u"label_2")
-        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        self.gridLayout_2.setHorizontalSpacing(0)
+        self.btn_Voltar = QPushButton(Vendas)
+        self.btn_Voltar.setObjectName(u"btn_Voltar")
+        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.btn_Voltar.sizePolicy().hasHeightForWidth())
+        self.btn_Voltar.setSizePolicy(sizePolicy)
         font = QFont()
-        font.setPointSize(30)
+        font.setFamily(u"Segoe UI Black")
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_2.setFont(font)
+        self.btn_Voltar.setFont(font)
+        self.btn_Voltar.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_Voltar.setStyleSheet(u"QPushButton{\n"
+"	background-color: rgb(0, 0, 127);\n"
+"   border-radius: 0px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"  background-color:rgb(50,50,50);\n"
+"  color:rgb(200,200,200)\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color:rgb(35,35,35);\n"
+"  color:rgb(200,200,200)\n"
+"}")
+        icon = QIcon()
+        icon.addFile(u":/image/imagens/voltar1.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_Voltar.setIcon(icon)
+        self.btn_Voltar.setIconSize(QSize(80, 45))
+
+        self.gridLayout_2.addWidget(self.btn_Voltar, 0, 0, 1, 1)
+
+        self.label_2 = QLabel(Vendas)
+        self.label_2.setObjectName(u"label_2")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy1)
+        font1 = QFont()
+        font1.setPointSize(30)
+        font1.setBold(True)
+        font1.setWeight(75)
+        self.label_2.setFont(font1)
         self.label_2.setStyleSheet(u"background-color: rgb(0, 0, 127);\n"
 "color: rgb(255, 255, 255);")
         self.label_2.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout_2.addWidget(self.label_2, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.label_2, 0, 1, 1, 1)
 
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
+
+        self.gridLayout_6.addLayout(self.gridLayout_2, 0, 0, 1, 1)
+
+        self.gridLayout = QGridLayout()
+        self.gridLayout.setObjectName(u"gridLayout")
         self.btn_CadCliente = QPushButton(Vendas)
         self.btn_CadCliente.setObjectName(u"btn_CadCliente")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.btn_CadCliente.sizePolicy().hasHeightForWidth())
-        self.btn_CadCliente.setSizePolicy(sizePolicy1)
-        font1 = QFont()
-        font1.setFamily(u"Segoe UI Black")
-        font1.setPointSize(11)
-        font1.setBold(True)
-        font1.setWeight(75)
-        self.btn_CadCliente.setFont(font1)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.btn_CadCliente.sizePolicy().hasHeightForWidth())
+        self.btn_CadCliente.setSizePolicy(sizePolicy2)
+        self.btn_CadCliente.setFont(font)
         self.btn_CadCliente.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_CadCliente.setStyleSheet(u"QPushButton{\n"
 "   border-radius: 8px\n"
@@ -69,18 +105,18 @@ class Ui_Vendas(object):
 "  background-color:rgb(35,35,35);\n"
 "  color:rgb(200,200,200)\n"
 "}")
-        icon = QIcon()
-        icon.addFile(u":/image/imagens/cadastro.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_CadCliente.setIcon(icon)
+        icon1 = QIcon()
+        icon1.addFile(u":/image/imagens/users.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_CadCliente.setIcon(icon1)
         self.btn_CadCliente.setIconSize(QSize(45, 45))
 
-        self.horizontalLayout.addWidget(self.btn_CadCliente)
+        self.gridLayout.addWidget(self.btn_CadCliente, 0, 0, 1, 1)
 
         self.btn_Estoque = QPushButton(Vendas)
         self.btn_Estoque.setObjectName(u"btn_Estoque")
-        sizePolicy1.setHeightForWidth(self.btn_Estoque.sizePolicy().hasHeightForWidth())
-        self.btn_Estoque.setSizePolicy(sizePolicy1)
-        self.btn_Estoque.setFont(font1)
+        sizePolicy2.setHeightForWidth(self.btn_Estoque.sizePolicy().hasHeightForWidth())
+        self.btn_Estoque.setSizePolicy(sizePolicy2)
+        self.btn_Estoque.setFont(font)
         self.btn_Estoque.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_Estoque.setStyleSheet(u"QPushButton{\n"
 "   border-radius: 8px\n"
@@ -95,18 +131,44 @@ class Ui_Vendas(object):
 "  background-color:rgb(35,35,35);\n"
 "  color:rgb(200,200,200)\n"
 "}")
-        icon1 = QIcon()
-        icon1.addFile(u":/image/imagens/vendas.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_Estoque.setIcon(icon1)
+        icon2 = QIcon()
+        icon2.addFile(u":/image/imagens/vendas.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_Estoque.setIcon(icon2)
         self.btn_Estoque.setIconSize(QSize(45, 45))
 
-        self.horizontalLayout.addWidget(self.btn_Estoque)
+        self.gridLayout.addWidget(self.btn_Estoque, 0, 1, 1, 1)
+
+        self.btn_Estoque_2 = QPushButton(Vendas)
+        self.btn_Estoque_2.setObjectName(u"btn_Estoque_2")
+        sizePolicy2.setHeightForWidth(self.btn_Estoque_2.sizePolicy().hasHeightForWidth())
+        self.btn_Estoque_2.setSizePolicy(sizePolicy2)
+        self.btn_Estoque_2.setFont(font)
+        self.btn_Estoque_2.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_Estoque_2.setStyleSheet(u"QPushButton{\n"
+"   border-radius: 8px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"  background-color:rgb(50,50,50);\n"
+"  color:rgb(200,200,200)\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color:rgb(35,35,35);\n"
+"  color:rgb(200,200,200)\n"
+"}")
+        icon3 = QIcon()
+        icon3.addFile(u":/image/imagens/Produtos.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_Estoque_2.setIcon(icon3)
+        self.btn_Estoque_2.setIconSize(QSize(45, 45))
+
+        self.gridLayout.addWidget(self.btn_Estoque_2, 0, 2, 1, 1)
 
         self.btn_Salvar = QPushButton(Vendas)
         self.btn_Salvar.setObjectName(u"btn_Salvar")
-        sizePolicy1.setHeightForWidth(self.btn_Salvar.sizePolicy().hasHeightForWidth())
-        self.btn_Salvar.setSizePolicy(sizePolicy1)
-        self.btn_Salvar.setFont(font1)
+        sizePolicy2.setHeightForWidth(self.btn_Salvar.sizePolicy().hasHeightForWidth())
+        self.btn_Salvar.setSizePolicy(sizePolicy2)
+        self.btn_Salvar.setFont(font)
         self.btn_Salvar.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_Salvar.setStyleSheet(u"QPushButton{;\n"
 "   border-radius: 8px\n"
@@ -121,140 +183,210 @@ class Ui_Vendas(object):
 "  background-color:rgb(35,35,35);\n"
 "  color:rgb(200,200,200)\n"
 "}")
-        icon2 = QIcon()
-        icon2.addFile(u":/image/imagens/Save.32.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.btn_Salvar.setIcon(icon2)
+        icon4 = QIcon()
+        icon4.addFile(u":/image/imagens/guardar-dados.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_Salvar.setIcon(icon4)
         self.btn_Salvar.setIconSize(QSize(45, 45))
 
-        self.horizontalLayout.addWidget(self.btn_Salvar)
+        self.gridLayout.addWidget(self.btn_Salvar, 0, 3, 1, 1)
 
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.btn_Limpar = QPushButton(Vendas)
+        self.btn_Limpar.setObjectName(u"btn_Limpar")
+        sizePolicy2.setHeightForWidth(self.btn_Limpar.sizePolicy().hasHeightForWidth())
+        self.btn_Limpar.setSizePolicy(sizePolicy2)
+        self.btn_Limpar.setFont(font)
+        self.btn_Limpar.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_Limpar.setStyleSheet(u"QPushButton{;\n"
+"   border-radius: 8px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"  background-color:rgb(50,50,50);\n"
+"  color:rgb(200,200,200)\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color:rgb(35,35,35);\n"
+"  color:rgb(200,200,200)\n"
+"}")
+        icon5 = QIcon()
+        icon5.addFile(u":/image/imagens/limpar-limpo (1).png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_Limpar.setIcon(icon5)
+        self.btn_Limpar.setIconSize(QSize(45, 45))
 
-        self.horizontalLayout.addItem(self.horizontalSpacer)
+        self.gridLayout.addWidget(self.btn_Limpar, 0, 4, 1, 1)
+
+        self.btn_Excluir = QPushButton(Vendas)
+        self.btn_Excluir.setObjectName(u"btn_Excluir")
+        sizePolicy2.setHeightForWidth(self.btn_Excluir.sizePolicy().hasHeightForWidth())
+        self.btn_Excluir.setSizePolicy(sizePolicy2)
+        self.btn_Excluir.setFont(font)
+        self.btn_Excluir.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_Excluir.setStyleSheet(u"QPushButton{;\n"
+"   border-radius: 8px\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"  background-color:rgb(50,50,50);\n"
+"  color:rgb(200,200,200)\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"  background-color:rgb(35,35,35);\n"
+"  color:rgb(200,200,200)\n"
+"}")
+        icon6 = QIcon()
+        icon6.addFile(u":/image/imagens/excluir-arquivo.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.btn_Excluir.setIcon(icon6)
+        self.btn_Excluir.setIconSize(QSize(45, 45))
+
+        self.gridLayout.addWidget(self.btn_Excluir, 0, 5, 1, 1)
 
 
-        self.gridLayout_2.addLayout(self.horizontalLayout, 1, 0, 1, 1)
+        self.gridLayout_6.addLayout(self.gridLayout, 1, 0, 1, 1)
 
-        self.RegistrodeVendas = QFrame(Vendas)
-        self.RegistrodeVendas.setObjectName(u"RegistrodeVendas")
-        self.RegistrodeVendas.setFrameShape(QFrame.StyledPanel)
-        self.RegistrodeVendas.setFrameShadow(QFrame.Sunken)
-        self.gridLayout = QGridLayout(self.RegistrodeVendas)
-        self.gridLayout.setObjectName(u"gridLayout")
-        self.label = QLabel(self.RegistrodeVendas)
+        self.label = QLabel(Vendas)
         self.label.setObjectName(u"label")
+        sizePolicy1.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy1)
         font2 = QFont()
         font2.setPointSize(14)
         font2.setBold(True)
         font2.setWeight(75)
         self.label.setFont(font2)
+        self.label.setStyleSheet(u"background-color: rgb(0, 0, 127);\n"
+"color: rgb(255, 255, 255);")
         self.label.setFrameShape(QFrame.NoFrame)
+        self.label.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 3)
+        self.gridLayout_6.addWidget(self.label, 2, 0, 1, 1)
 
-        self.label_3 = QLabel(self.RegistrodeVendas)
+        self.gridLayout_3 = QGridLayout()
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.label_3 = QLabel(Vendas)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setFont(font2)
 
-        self.gridLayout.addWidget(self.label_3, 1, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.label_3, 0, 0, 1, 1)
 
-        self.Cbb_nome = QComboBox(self.RegistrodeVendas)
+        self.Cbb_nome = QComboBox(Vendas)
         self.Cbb_nome.setObjectName(u"Cbb_nome")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.Cbb_nome.sizePolicy().hasHeightForWidth())
-        self.Cbb_nome.setSizePolicy(sizePolicy2)
-        self.Cbb_nome.setFont(font2)
-
-        self.gridLayout.addWidget(self.Cbb_nome, 1, 1, 1, 2)
-
-        self.label_4 = QLabel(self.RegistrodeVendas)
-        self.label_4.setObjectName(u"label_4")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
-        self.label_4.setSizePolicy(sizePolicy3)
+        sizePolicy3.setHeightForWidth(self.Cbb_nome.sizePolicy().hasHeightForWidth())
+        self.Cbb_nome.setSizePolicy(sizePolicy3)
+        self.Cbb_nome.setFont(font2)
+
+        self.gridLayout_3.addWidget(self.Cbb_nome, 0, 1, 1, 1)
+
+        self.label_4 = QLabel(Vendas)
+        self.label_4.setObjectName(u"label_4")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Preferred)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
+        self.label_4.setSizePolicy(sizePolicy4)
         self.label_4.setFont(font2)
 
-        self.gridLayout.addWidget(self.label_4, 1, 6, 1, 2)
+        self.gridLayout_3.addWidget(self.label_4, 0, 2, 1, 1)
 
-        self.Cbb_Pag = QComboBox(self.RegistrodeVendas)
+        self.Cbb_Pag = QComboBox(Vendas)
         self.Cbb_Pag.setObjectName(u"Cbb_Pag")
         sizePolicy2.setHeightForWidth(self.Cbb_Pag.sizePolicy().hasHeightForWidth())
         self.Cbb_Pag.setSizePolicy(sizePolicy2)
         self.Cbb_Pag.setFont(font2)
 
-        self.gridLayout.addWidget(self.Cbb_Pag, 1, 9, 1, 1)
+        self.gridLayout_3.addWidget(self.Cbb_Pag, 0, 3, 1, 1)
 
-        self.label_5 = QLabel(self.RegistrodeVendas)
+
+        self.gridLayout_6.addLayout(self.gridLayout_3, 3, 0, 1, 1)
+
+        self.gridLayout_4 = QGridLayout()
+        self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.label_5 = QLabel(Vendas)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setFont(font2)
 
-        self.gridLayout.addWidget(self.label_5, 2, 0, 1, 2)
+        self.gridLayout_4.addWidget(self.label_5, 0, 0, 1, 1)
 
-        self.Cbb_Produto = QComboBox(self.RegistrodeVendas)
+        self.Cbb_Produto = QComboBox(Vendas)
         self.Cbb_Produto.setObjectName(u"Cbb_Produto")
-        sizePolicy2.setHeightForWidth(self.Cbb_Produto.sizePolicy().hasHeightForWidth())
-        self.Cbb_Produto.setSizePolicy(sizePolicy2)
+        sizePolicy3.setHeightForWidth(self.Cbb_Produto.sizePolicy().hasHeightForWidth())
+        self.Cbb_Produto.setSizePolicy(sizePolicy3)
         self.Cbb_Produto.setFont(font2)
 
-        self.gridLayout.addWidget(self.Cbb_Produto, 2, 2, 1, 1)
+        self.gridLayout_4.addWidget(self.Cbb_Produto, 0, 1, 1, 1)
 
-        self.label_6 = QLabel(self.RegistrodeVendas)
+        self.label_6 = QLabel(Vendas)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setFont(font2)
 
-        self.gridLayout.addWidget(self.label_6, 2, 3, 1, 3)
+        self.gridLayout_4.addWidget(self.label_6, 0, 2, 1, 1)
 
-        self.L_Quat = QLineEdit(self.RegistrodeVendas)
+        self.L_Quat = QLineEdit(Vendas)
         self.L_Quat.setObjectName(u"L_Quat")
+        sizePolicy2.setHeightForWidth(self.L_Quat.sizePolicy().hasHeightForWidth())
+        self.L_Quat.setSizePolicy(sizePolicy2)
         self.L_Quat.setFont(font2)
         self.L_Quat.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout.addWidget(self.L_Quat, 2, 6, 1, 3)
+        self.gridLayout_4.addWidget(self.L_Quat, 0, 3, 1, 1)
 
-        self.label_7 = QLabel(self.RegistrodeVendas)
+
+        self.gridLayout_6.addLayout(self.gridLayout_4, 4, 0, 1, 1)
+
+        self.gridLayout_5 = QGridLayout()
+        self.gridLayout_5.setObjectName(u"gridLayout_5")
+        self.label_7 = QLabel(Vendas)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setFont(font2)
 
-        self.gridLayout.addWidget(self.label_7, 3, 0, 1, 1)
+        self.gridLayout_5.addWidget(self.label_7, 0, 0, 1, 1)
 
-        self.L_Valor = QLineEdit(self.RegistrodeVendas)
+        self.L_Valor = QLineEdit(Vendas)
         self.L_Valor.setObjectName(u"L_Valor")
+        sizePolicy2.setHeightForWidth(self.L_Valor.sizePolicy().hasHeightForWidth())
+        self.L_Valor.setSizePolicy(sizePolicy2)
         self.L_Valor.setFont(font2)
         self.L_Valor.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout.addWidget(self.L_Valor, 3, 1, 1, 3)
+        self.gridLayout_5.addWidget(self.L_Valor, 0, 1, 1, 1)
 
-        self.label_8 = QLabel(self.RegistrodeVendas)
+        self.label_8 = QLabel(Vendas)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setFont(font2)
 
-        self.gridLayout.addWidget(self.label_8, 3, 4, 1, 1)
+        self.gridLayout_5.addWidget(self.label_8, 0, 2, 1, 1)
 
-        self.L_Id = QLineEdit(self.RegistrodeVendas)
+        self.L_Id = QLineEdit(Vendas)
         self.L_Id.setObjectName(u"L_Id")
+        sizePolicy2.setHeightForWidth(self.L_Id.sizePolicy().hasHeightForWidth())
+        self.L_Id.setSizePolicy(sizePolicy2)
         self.L_Id.setFont(font2)
         self.L_Id.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout.addWidget(self.L_Id, 3, 5, 1, 2)
+        self.gridLayout_5.addWidget(self.L_Id, 0, 3, 1, 1)
 
-        self.label_9 = QLabel(self.RegistrodeVendas)
+        self.label_9 = QLabel(Vendas)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setFont(font2)
 
-        self.gridLayout.addWidget(self.label_9, 3, 7, 1, 1)
+        self.gridLayout_5.addWidget(self.label_9, 0, 4, 1, 1)
 
-        self.L_Data = QLineEdit(self.RegistrodeVendas)
+        self.L_Data = QLineEdit(Vendas)
         self.L_Data.setObjectName(u"L_Data")
+        sizePolicy2.setHeightForWidth(self.L_Data.sizePolicy().hasHeightForWidth())
+        self.L_Data.setSizePolicy(sizePolicy2)
         self.L_Data.setFont(font2)
         self.L_Data.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout.addWidget(self.L_Data, 3, 8, 1, 2)
+        self.gridLayout_5.addWidget(self.L_Data, 0, 5, 1, 1)
 
-        self.Tab_Caixa_Vendas = QTableWidget(self.RegistrodeVendas)
+
+        self.gridLayout_6.addLayout(self.gridLayout_5, 5, 0, 1, 1)
+
+        self.Tab_Caixa_Vendas = QTableWidget(Vendas)
         if (self.Tab_Caixa_Vendas.columnCount() < 7):
             self.Tab_Caixa_Vendas.setColumnCount(7)
         __qtablewidgetitem = QTableWidgetItem()
@@ -279,17 +411,14 @@ class Ui_Vendas(object):
         __qtablewidgetitem6.setFont(font2);
         self.Tab_Caixa_Vendas.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         self.Tab_Caixa_Vendas.setObjectName(u"Tab_Caixa_Vendas")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.Tab_Caixa_Vendas.sizePolicy().hasHeightForWidth())
-        self.Tab_Caixa_Vendas.setSizePolicy(sizePolicy4)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.Tab_Caixa_Vendas.sizePolicy().hasHeightForWidth())
+        self.Tab_Caixa_Vendas.setSizePolicy(sizePolicy5)
         self.Tab_Caixa_Vendas.setFont(font2)
 
-        self.gridLayout.addWidget(self.Tab_Caixa_Vendas, 4, 0, 1, 10)
-
-
-        self.gridLayout_2.addWidget(self.RegistrodeVendas, 2, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.Tab_Caixa_Vendas, 6, 0, 1, 1)
 
 
         self.retranslateUi(Vendas)
@@ -299,6 +428,10 @@ class Ui_Vendas(object):
 
     def retranslateUi(self, Vendas):
         Vendas.setWindowTitle(QCoreApplication.translate("Vendas", u"Dialog", None))
+#if QT_CONFIG(tooltip)
+        self.btn_Voltar.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.btn_Voltar.setText("")
         self.label_2.setText(QCoreApplication.translate("Vendas", u"Vendas", None))
         self.btn_CadCliente.setText(QCoreApplication.translate("Vendas", u"Clientes", None))
 #if QT_CONFIG(tooltip)
@@ -306,9 +439,21 @@ class Ui_Vendas(object):
 #endif // QT_CONFIG(tooltip)
         self.btn_Estoque.setText(QCoreApplication.translate("Vendas", u"Compras", None))
 #if QT_CONFIG(tooltip)
+        self.btn_Estoque_2.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.btn_Estoque_2.setText(QCoreApplication.translate("Vendas", u"Produtos", None))
+#if QT_CONFIG(tooltip)
         self.btn_Salvar.setToolTip("")
 #endif // QT_CONFIG(tooltip)
         self.btn_Salvar.setText(QCoreApplication.translate("Vendas", u"Salvar", None))
+#if QT_CONFIG(tooltip)
+        self.btn_Limpar.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.btn_Limpar.setText(QCoreApplication.translate("Vendas", u"Limpar", None))
+#if QT_CONFIG(tooltip)
+        self.btn_Excluir.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.btn_Excluir.setText(QCoreApplication.translate("Vendas", u"Excluir", None))
         self.label.setText(QCoreApplication.translate("Vendas", u"Registro de Vendas", None))
         self.label_3.setText(QCoreApplication.translate("Vendas", u"Nome:", None))
         self.Cbb_nome.setCurrentText("")

@@ -1,6 +1,8 @@
 <RCC>
   <qresource prefix="image">
+    <file>../imagens/voltar1.png</file>
     <file>../imagens/menu-bar (1).png</file>
+    <file>../imagens/mais (2).png</file>
     <file>../imagens/calendario.png</file>
     <file>../imagens/Delete.png</file>
     <file>../imagens/Save.32.png</file>

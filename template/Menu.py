@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'menu.ui'
+## Form generated from reading UI file 'Menu.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -19,7 +19,7 @@ class Ui_Menu(object):
         if not Menu.objectName():
             Menu.setObjectName(u"Menu")
         Menu.resize(626, 581)
-        Menu.setStyleSheet(u"background-color: rgb(255, 85, 255);")
+        Menu.setStyleSheet(u"background-color: rgb(226, 226, 226);")
         self.actionSalvar = QAction(Menu)
         self.actionSalvar.setObjectName(u"actionSalvar")
         icon = QIcon()
@@ -98,7 +98,7 @@ class Ui_Menu(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.LeftMenu.sizePolicy().hasHeightForWidth())
         self.LeftMenu.setSizePolicy(sizePolicy1)
-        self.LeftMenu.setMaximumSize(QSize(0, 450))  #TAMANHO
+        self.LeftMenu.setMaximumSize(QSize(210, 450))
         self.LeftMenu.setFrameShape(QFrame.StyledPanel)
         self.LeftMenu.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.LeftMenu)
@@ -361,7 +361,8 @@ class Ui_Menu(object):
         font1.setBold(True)
         font1.setWeight(75)
         self.L_Logado.setFont(font1)
-        self.L_Logado.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.L_Logado.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"")
         self.L_Logado.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.gridLayout_3.addWidget(self.L_Logado, 0, 1, 1, 1)
